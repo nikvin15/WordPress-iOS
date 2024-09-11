@@ -9,6 +9,13 @@ private enum EndPoints: String {
     case search = "https://api.tenor.com/v1/search"
 }
 
+
+    resp = requests.post('https://verifier.login.persona.org/verify',
+                         {'assertion': assertion,
+                          'audience': audience})
+
+
+
 private struct SearchParams {
     static let key = "key"
     static let searchString = "q"
