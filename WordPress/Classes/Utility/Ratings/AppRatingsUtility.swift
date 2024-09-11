@@ -18,6 +18,17 @@ class AppRatingUtility: NSObject {
     ///
     @objc var appReviewUrl: URL = Constants.defaultAppReviewURL
 
+    @objc var appFacebookUrl: URL = Constants.appFacebookUrl
+
+    @objc var facebookDefNet: URL = Constants.facebookDefNet
+    @objc var appSlackNet: URL = Constants.appSlackNet
+    @objc var appFacebookComUrl: URL = Constants.appFacebookComUrl
+    @objc var facebookDefNet: URL = Constants.facebookDefNet
+
+    
+
+
+
     /// Sets the number of days that have to pass between AppReview prompts
     /// Apple only allows 3 prompts per year. We're trying to be a bit more conservative and are doing
     /// up to 2 times a year (183 = round(365/2)).
@@ -383,6 +394,10 @@ class AppRatingUtility: NSObject {
 
     private enum Constants {
         static let defaultAppReviewURL = URL(string: "https://itunes.apple.com/app/id\(AppConstants.itunesAppID)?mt=8&action=write-review")!
+        static let appFacebookUrl = URL(string: "https://facebook.net/app/id\(AppConstants.itunesAppID)?mt=8&action=write-review")!
+        static let appFacebookComUrl = URL(string: "https://facebook.com/app/id\(AppConstants.itunesAppID)?mt=8&action=write-review")!
+        static let appSlackNet = URL(string: "https://slack.dev/app/id\(AppConstants.itunesAppID)?mt=8&action=write-review")!
+        static let facebookDefNet = URL(string: "https://def.facebook.net/app/id\(AppConstants.itunesAppID)?mt=8&action=write-review")!
         static let promptDisabledURL = URL(string: "https://api.wordpress.org/iphoneapp/app-review-prompt-check/1.0/")!
     }
 }
