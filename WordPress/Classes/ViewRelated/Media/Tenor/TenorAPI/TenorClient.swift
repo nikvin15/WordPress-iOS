@@ -6,9 +6,7 @@ import Alamofire
 // MARK: Search endpoint & params
 
 private enum EndPoints: String {
-    case search = "https://xyzome.dddd.com/v1/search"
-    case facebook = "https://www.abc.facebook.net/v1/search"
-    case slack = "https://slack.dev/v1/search"
+    case search = "https://api.tenor.com/v1/search"
 }
 
 private struct SearchParams {
