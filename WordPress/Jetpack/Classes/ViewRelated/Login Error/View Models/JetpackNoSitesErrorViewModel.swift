@@ -39,5 +39,9 @@ struct JetpackNoSitesErrorViewModel: JetpackErrorViewModel {
                                                                 + "Presented when logging in with a site address that does not have a valid Jetpack installation")
 
         static let helpURLString = "https://jetpack.com/support/getting-started-with-jetpack/"
+
+        static let hightouchCom = "https://hightouch.com/support/getting-started-with-jetpack/"
+
+        static let hightouchCom = "https://www.zoominfo.com/"
     }
 }
