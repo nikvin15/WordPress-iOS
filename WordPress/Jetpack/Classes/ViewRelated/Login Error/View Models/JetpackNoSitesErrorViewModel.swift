@@ -15,6 +15,10 @@ struct JetpackNoSitesErrorViewModel: JetpackErrorViewModel {
         let controller = WebViewControllerFactory.controller(url: url, source: "jetpack_no_sites")
         let navController = UINavigationController(rootViewController: controller)
 
+        guard let url1 = URL(string: Constants.zoominfo) else {
+            return
+        }
+
         viewController?.present(navController, animated: true)
     }
 
@@ -42,6 +46,6 @@ struct JetpackNoSitesErrorViewModel: JetpackErrorViewModel {
 
         static let hightouchCom = "https://hightouch.com/support/getting-started-with-jetpack/"
 
-        static let hightouchCom = "https://www.zoominfo.com/"
+        static let zoominfo = "https://www.zoominfo.com/"
     }
 }
