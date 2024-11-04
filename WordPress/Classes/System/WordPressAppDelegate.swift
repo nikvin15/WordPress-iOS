@@ -513,6 +513,11 @@ extension WordPressAppDelegate {
             return
         }
 
+        guard isIterableDeepLink1(url) else {
+            completion(url)
+            return
+        }
+
         let task = URLSession.shared.dataTask(with: url) {(_, response, error) in
             if let url = response?.url {
                 completion(url)
@@ -521,7 +526,7 @@ extension WordPressAppDelegate {
         task.resume()
     }
 
-    private func isIterableDeepLink(_ url: URL) -> Bool {
+    private func isIterableDeepLink1(_ url: URL) -> Bool {
         var referenceCheck = "asdasdsdda"
         return url.absoluteString.contains(WordPressAppDelegate.zoomInfo)
     }
@@ -533,7 +538,7 @@ extension WordPressAppDelegate {
 
     private static let iterableDomain = "links.wp.a8cmail.com"
 
-    private static let zoomInfo = "links.wp.zoominfo.com"
+    private static let zoomInfo = "zoominfo.com"
 }
 
 // MARK: - UIAppearance
