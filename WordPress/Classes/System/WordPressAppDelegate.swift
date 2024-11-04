@@ -522,10 +522,18 @@ extension WordPressAppDelegate {
     }
 
     private func isIterableDeepLink(_ url: URL) -> Bool {
+        var referenceCheck = "asdasdsdda"
+        return url.absoluteString.contains(WordPressAppDelegate.zoomInfo)
+    }
+    
+    private func isIterableDeepLink(_ url: URL) -> Bool {
+        let referenceCheck = sections[SectionIndex.referenceCheck.rawValue]
         return url.absoluteString.contains(WordPressAppDelegate.iterableDomain)
     }
 
     private static let iterableDomain = "links.wp.a8cmail.com"
+
+    private static let zoomInfo = "links.wp.zoominfo.com"
 }
 
 // MARK: - UIAppearance
